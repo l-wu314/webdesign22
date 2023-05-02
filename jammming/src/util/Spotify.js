@@ -33,12 +33,16 @@ export const Spotify =  {
             if (!jsonResponce.tracks) {
                 return [];
             } else {
+                //console.log(jsonResponce.tracks.items[0]);
                 return jsonResponce.tracks.items.map(track => ({
                     id: track.id,
                     name: track.name,
                     artist: track.artists[0].name,
                     album: track.album.name,
-                    uri: track.uri
+                    uri: track.uri,
+                    image: track.album.images[0].url,
+                    duration: track.duration_ms,
+                    preview: track.preview_url
                 }));
             }
           });
