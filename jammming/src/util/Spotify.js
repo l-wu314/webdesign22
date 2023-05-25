@@ -1,7 +1,7 @@
 let accessToken;
 //const clientID = "4277843b9f8f4997b50ec10c668655e6";
 const clientID = "4277843b9f8f4997b50ec10c668655e6";
-const redirectURI = "http://localhost:3000/"
+const redirectURI = "https://sensational-biscochitos-25858b.netlify.app" //"http://localhost:3000/"
 export const Spotify =  {
     getAccessToken() {
         if (accessToken) {
@@ -66,7 +66,7 @@ export const Spotify =  {
                 }).then(responce => responce.json()
                 ).then(jsonResponce => {
                     const playlistID = jsonResponce.id;
-                    return fetch(`https://api.spotify.com/v1/users/{user_id}/playlists/${playlistID}/tracks`, {
+                    return fetch(`https://api.spotify.com/v1/users/${user_id}/playlists/${playlistID}/tracks`, {
                         headers: headers,
                         method: 'POST',
                         body: JSON.stringify({uris: trackURLs})

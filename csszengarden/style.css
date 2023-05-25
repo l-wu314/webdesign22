@@ -1,0 +1,171 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	font-size: 2vmin;
+	font-family: "Courier";
+	background-image: url("https://wallpaperaccess.com/full/1255074.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow-x: hidden;
+	margin-top: 100vh;
+}
+
+/*.page-wrapper {
+	width: 23vw;
+	height: 16vw;
+	overflow: scroll;
+	position: relative;
+	left: 29vw;
+	top: 9vw;
+}
+old code when body {margin: 0; width: 80vw; hieght: 50vw} was used
+*/
+
+.page-wrapper {
+	width: 100vw;
+	height: 100vh;
+}
+
+.intro {
+	width: 46vmin;
+	height: 32vmin;
+	overflow: scroll;
+	position: relative;
+	top: 19vmin;
+	left: 50%;
+	margin-left: -22vmin;
+}
+
+.main {
+	margin-top: 80vh;
+	padding-left: 20vw;
+	padding-right: 20vw;
+	padding-top: 2vw;
+
+	background-color: rgb(40, 127, 149);
+}
+
+.main * {
+	color: white;
+	font-family: 'VT323';
+}
+
+.main h3 {
+	font-size: 4vmin;
+}
+
+.main p, .main a{
+	font-size: 2.5vmin;
+}
+
+.intro::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+aside {
+	position: absolute;
+	top: 10vh;
+	left: 50%;
+	margin-left: -15vw;
+	width: 35vw;
+	border: 1px solid rgb(110, 255, 97);
+	height: 52vh;
+}
+
+.wrapper {
+	animation: animate 3s steps(23) forwards;
+	animation-delay: 1000ms;
+	overflow: hidden;
+	height: 0;
+}
+
+@keyframes animate {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 52vh;
+    }
+}
+
+#design-selection li {
+	color: black;
+	list-style-type: none;
+}
+
+aside a:first-child::before {
+	content: "> ";
+}
+
+aside p, aside h3, aside a {
+	font-size: 2vh;
+}
+
+#design-selection li a:last-child {
+	float: right;
+}
+
+.zen-translations:after {
+	content: "Scroll for more info";
+	color:  rgb(110, 255, 97);
+	float: right;
+  }
+
+aside li a {
+	color:rgb(110, 255, 97)
+}
+
+.sidebar div {
+	padding: 1vh;
+}
+
+p, a, h1, h2, h3 {
+	color: rgb(110, 255, 97);
+}
+
+.intro h3, .main h3 {
+	padding: 10px;
+	padding-top: 30px;
+}
+
+h1, h2 {
+	padding-bottom: 10px;
+}
+
+footer {
+	background-color: rgb(8, 39, 245);
+	margin-top: 5vh;
+	margin-bottom: 10px;
+	padding: 5vh;
+	text-align: center;
+	outline: 3px solid white;
+	outline-offset: -12px;
+}
+
+footer a {
+	color: white;
+	padding: 2vw;
+	font-size: 4vmin !important;
+	font-family: 'VT323';
+}
